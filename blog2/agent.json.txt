@@ -1,0 +1,18 @@
+{
+  "cloudwatch.emitMetrics": true,
+  "firehose.endpoint": "firehose.<your-aws-region>.amazonaws.com",
+
+  "awsAccessKeyId": "<your-iam-access-key>",
+  "awsSecretAccessKey": "<your-iam-secret-key>",
+
+  "flows": [
+    {
+      "filePattern": "<location/of/stream/data>",
+      "deliveryStream": "<kinesis-delivery-name-in-step3>"
+      "partitionKeyOption": "R",
+      "dataProcessingOptions": []
+    }
+  ]
+}
+
+
