@@ -18,7 +18,7 @@ const options = {
 
 let kinesisProducer = new KinesisProducer(options);
 let record = {
-    "message": "Test is test data"
+    "message": JSON.stringify({source: "vendor1", "load": {"vehicle_no": "VHIND12345", "latitude":"22.544", "longitude":"45.44", "gps_timestamp": "2020-01-15 12:00:00"}})
 }
 
 kinesisProducer.on('drainError', (errors) => {
